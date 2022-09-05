@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   return res.status(401).json({ msg: "Not Authorized" });
 });
 
-app.use("/api/auth", require("./src/routes/authRoute"));
+app.use("/auth", require("./src/routes/authRoute"));
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
